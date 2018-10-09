@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label layoutX="8.0" layoutY="33.0">Weather sponsored by:</Label>
+        <ImageView id="logoImage" fx:id="imageView" fitHeight="53.0" fitWidth="187.0" layoutX="174.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image fx:id="logo" backgroundLoading="true" url="http://icons.wxug.com/graphics/wu2/logo_130x80.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="300.0" layoutY="26.0">Please Enter a City</Label>
+        <TextField id="cityField" fx:id="cityField" layoutX="434.0" layoutY="22.0" />
+        <TextField id="stateField" fx:id="stateField" layoutX="434.0" layoutY="60.0" prefHeight="31.0" prefWidth="56.0" />
+        <Label layoutX="300.0" layoutY="60.0" prefHeight="21.0" prefWidth="174.0" text="Please Enter a State">Please
+            Enter a State
+        </Label>
+        <Button id="submitButton" layoutX="634.0" layoutY="38.0" onAction="#handleSubmitButtonAction" prefHeight="31.0" prefWidth="110.0" text="Get Weather" />
+        <Pane fx:id="conditionsPane" layoutX="29.0" layoutY="131.0" prefHeight="257.0" prefWidth="631.0" visible="false">
+            <children>
+                <Label layoutX="25.0" layoutY="28.0" text="Current Weather" />
+                <Label fx:id="currentWeather" layoutX="139.0" layoutY="28.0" prefHeight="17.0" prefWidth="276.0" />
+                <Label layoutX="25.0" layoutY="57.0" text="Currently:" />
+                <Label fx:id="temperature" layoutX="139.0" layoutY="57.0" prefHeight="17.0" prefWidth="276.0" />
+                <Label layoutX="25.0" layoutY="112.0" text="Wind Conditions" />
+                <Label fx:id="wind" layoutX="140.0" layoutY="112.0" prefHeight="17.0" prefWidth="276.0" />
+                <Label layoutX="25.0" layoutY="83.0" text="Feels Like:" />
+                <Label fx:id="feelsLike" layoutX="139.0" layoutY="83.0" prefHeight="17.0" prefWidth="276.0" />
+                <Label fx:id="lastUpdated" layoutX="140.0" layoutY="235.0" prefHeight="17.0" prefWidth="276.0" />
+                <Label fx:id="station" layoutX="416.0" layoutY="235.0" prefHeight="17.0" prefWidth="174.0" />
+                <Label layoutX="25.0" layoutY="144.0" text="Pressure(in):" />
+                <Label fx:id="pressure" layoutX="140.0" layoutY="144.0" prefHeight="17.0" prefWidth="276.0" />
+
+            </children>
+
+        </Pane>
+        <Label layoutX="580.0" layoutY="380.0" text="Copyright Trey Scarborough"/>
+    </children>
+</AnchorPane>
